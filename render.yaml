@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: qinglong
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /
+    envVars:
+      # 登录用户名/登录密码
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+        
+      # 固定端口（青龙默认 5700）
+      - key: PORT
+        value: "5700"
+        
+      # GitHub 备份仓库 (格式: 用户名/仓库名)
+      - key: GH_BACKUP_REPO
+        sync: false
+        
+      # GitHub 分支
+      - key: GH_BACKUP_BRANCH
+        value: "main"
+      
+      # GitHub Personal Access Token
+      - key: GH_TOKEN
+        sync: false
+      
+      # Git 用户信息
+      - key: GH_EMAIL
+        value: "qinglong@render.com"
+      - key: GH_USER
+        value: "QingLong-Backup"
+      
+      # 保留备份数量
+      - key: KEEP_BACKUPS
+        value: "5"
+      
+      # 备份加密密码（可选，留空不加密）
+      - key: BACKUP_PASS
+        sync: false
