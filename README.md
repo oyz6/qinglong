@@ -42,10 +42,3 @@ GH_USER=Your-Name
 ## 请在青龙面板中添加定时备份任务: task /ql/qinglong-backup.sh"
 ![备份任务](./UI.png)
 
-
-## 青龙面板重置密码(应急处理)
-```
-curl -X PUT "http://127.0.0.1:5700/open/user/init" \
--H "Content-Type: application/json" \
--d '{"username":"登录用户名","password":"登录密码"}'
-```
