@@ -9,7 +9,7 @@
 | `GH_BACKUP_BRANCH` | ✅ | `main` | 备份分支名称 |
 | `ADMIN_USERNAME` | ✅ | - | 面板登录用户名 |
 | `ADMIN_PASSWORD` | ✅ | - | 面板登录密码 |
-| `PORT` | ✅ | `5700` | 服务运行端口 |
+| `QL_PORT` | ✅ | `5700` | 服务运行端口 |
 
 ## 可选配置项
 | 变量 | 必填 | 默认值 | 说明 |
@@ -29,7 +29,7 @@ GH_TOKEN=ghp_your_github_token
 GH_BACKUP_BRANCH=main
 ADMIN_USERNAME=admin
 ADMIN_PASSWORD=secure_password
-PORT=5600
+QL_PORT=5600
 
 ## 可选环境变量
 KEEP_BACKUPS=5
